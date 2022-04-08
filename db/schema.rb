@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_28_145214) do
+ActiveRecord::Schema.define(version: 2022_04_08_211318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attempts", force: :cascade do |t|
+    t.string "answer"
+    t.bigint "user_id", null: false
+    t.bigint "riddle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["riddle_id"], name: "index_attempts_on_riddle_id"
+    t.index ["user_id"], name: "index_attempts_on_user_id"
+  end
+
+  create_table "riddles", force: :cascade do |t|
+    t.text "question"
+    t.integer "level"
+    t.string "image"
+    t.string "answer"
+    t.string "option1"
+    t.string "option2"
+    t.string "option3"
+    t.string "option4"
+    t.bigint "room_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_riddles_on_room_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "theme"
+    t.string "image"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rooms_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
@@ -46,4 +80,8 @@ ActiveRecord::Schema.define(version: 2022_03_28_145214) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "attempts", "riddles"
+  add_foreign_key "attempts", "users"
+  add_foreign_key "riddles", "rooms"
+  add_foreign_key "rooms", "users"
 end

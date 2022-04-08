@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyText
+  level: 1
+  image: MyString
+  answer: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  room: one
+
+two:
+  question: MyText
+  level: 1
+  image: MyString
+  answer: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  room: two
