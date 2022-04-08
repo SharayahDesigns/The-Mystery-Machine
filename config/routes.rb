@@ -6,7 +6,10 @@ namespace :api do
   get '/rooms', to: 'rooms#index'
 
   # Get Rooms by User
-  get '/rooms/:id', to: 'users#rooms'
+  get '/users/:id', to: 'users#rooms'
+
+  # Get Questions for Room
+  # get '/rooms/:id', 
   
 end
 
