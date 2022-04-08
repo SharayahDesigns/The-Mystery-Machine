@@ -10,3 +10,5 @@ User.destroy_all
 
 u1 = User.create(name:'test1', email:'test1@test.com', password:'test1234', image:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png')
 u2 = User.create(name:'test2', email:'test2@test.com', password:'test1234', image:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png')
+
+

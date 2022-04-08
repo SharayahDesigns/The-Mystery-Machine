@@ -8,6 +8,9 @@ import Register from './components/auth/Register';
 import NoMatch from './components/shared/NoMatch';
 import FetchUser from './components/shared/FetchUser';
 import ProtectedRoute from './components/auth/ProtectRoute';
+import About from './components/Pages/About';
+import Profile from './components/Pages/Profile';
+import Themes from './components/Pages/Themes';
 
 function App() {
   return (
@@ -22,7 +25,12 @@ function App() {
                 <Route path='/register' element={<Register />} />
             
             <Route element={<ProtectedRoute/>}>
-                <Route path='/' element={<Home />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/themes' element={<Themes/>}/>
+              
+              
            </Route>
                 <Route path='*' element={<NoMatch />} />
           </Routes>

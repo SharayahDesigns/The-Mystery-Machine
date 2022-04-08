@@ -20,7 +20,12 @@ const NavBar = () => {
   return (
     <div style={{display:'flex', justifyContent:'space-between'}}>
         <div>
-      <Link to='/'>Home</Link>
+        <Link to='/'>Home</Link>
+        <Link to='/themes'>Theme</Link>
+        <Link to='/profile'>Profile</Link>
+        <Link to='/about'>About</Link>
+        
+        
       </div>
       <div>
         <div>{renderRightNav()}</div>
