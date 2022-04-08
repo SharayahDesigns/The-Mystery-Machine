@@ -14,6 +14,8 @@ const NavBar = () => {
       <>
       <Link to='/login'>Login</Link>
         <Link to='/register'>Register</Link>
+        <Link to='.client/src/components/shared/About.js'>About</Link>
+
         
     </>)
   };
