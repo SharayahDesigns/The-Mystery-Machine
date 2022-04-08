@@ -9,7 +9,7 @@ namespace :api do
   get '/users/:id', to: 'users#rooms'
 
   # Get Questions for Room
-  # get '/rooms/:id', 
+  get '/rooms/:id', to: 'rooms#show' 
   
 end
 
