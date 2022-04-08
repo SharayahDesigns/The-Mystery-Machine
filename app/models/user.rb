@@ -3,6 +3,7 @@
 class User < ActiveRecord::Base
   has_many :rooms, dependent: :destroy
   has_many :riddles, through: :attempts
+
 extend Devise::Models
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
