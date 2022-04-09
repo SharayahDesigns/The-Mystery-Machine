@@ -12,7 +12,7 @@ namespace :api do
   get '/rooms/:id', to: 'rooms#show' 
 
   # Get Profile Info with Points
-  get '/profile/:id', to: 'users#profile'
+  get '/profiles', to: 'users#profiles'
   
 end
 

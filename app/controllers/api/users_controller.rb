@@ -5,9 +5,8 @@ class Api::UsersController < ApplicationController
         render json: user.rooms
     end
 
-    def profile
-        profile = User.find(params[:id])
-        render json: User.profile
+    def profiles
+        profile = render json: User.profiles
     end 
 
 end
