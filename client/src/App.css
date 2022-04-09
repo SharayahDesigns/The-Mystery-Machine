@@ -1,7 +1,16 @@
+.nav {
+text-decoration: none!important;
+color: white!important;
+justify-content: space-between;
+}
 .App {
   text-align: center;
-}
 
+}
+.Button{
+text-decoration: none;
+border: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +21,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
