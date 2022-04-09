@@ -1,15 +1,65 @@
+.btn{
+justify-content: space-between;
+margin: 10px!important;
+}
+.btn1{
+position:fixed;
+   left:100px;
+}
+.nav1 {
+display: flex;
+align-items: center;
+padding: 10px 30px;
+margin: 10px 10px;
+width: 70px;
+
+}
+.album {
+width: 200px;
+border-radius: 20px;
+}
+.button2 {
+background-color: rgb(47, 164, 207)!important;
+color: rgb(231, 245, 251);
+}
+.button {
+font-weight: 10px;
+width: 5px;
+color: blue;
+}
+.flex-parent {
+display: flex;
+}
+.flex-child {
+flex: 1;
+}
+
+.navmore {
+text-decoration: none;
+color: #5e6064;
+}
+
+
+
+
 .nav {
 text-decoration: none!important;
 color: white!important;
-justify-content: space-between;
+justify-content: space-between!important;
+
+padding: 20px 10px;
+margin: 10px 10px;
+width: 70px;
 }
 .App {
   text-align: center;
 
 }
 .Button{
-text-decoration: none;
-border: none;
+text-decoration: none!important;
+border: none!important;
+background-color: rgb(47, 164, 207)!important;
+color: rgb(231, 245, 251);
 }
 .App-logo {
   height: 40vmin;

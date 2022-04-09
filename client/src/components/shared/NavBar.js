@@ -1,32 +1,45 @@
 import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {AuthContext} from '../../providers/AuthProvider'
-import {AppBar, IconButton, Toolbar, Typography, Box, Button} from '@mui/material'
+import {AppBar, Toolbar, Typography, Box} from '@mui/material'
 import image from '../Images/logo.png'
 import SearchIcon from '@mui/icons-material/Search'
-import Search from '@mui/icons-material/Search'
 import {styled,alpha} from '@mui/material/styles'
 import {InputBase} from '@mui/material'
-
+import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu';
+import {Container} from '@mui/material'
+import {Menu} from '@mui/material'
+import {MenuItem} from '@mui/material'
+import {Tooltip} from '@mui/material'
+import { Avatar } from '@mui/material'
+import IconButton from '@mui/material/IconButton';
+import {Nav, Navbar,} from 'react-bootstrap'
+
+
 
 const NavBar = () => {
   const auth = useContext(AuthContext);
   const [anchorElUser,setAnchorElUser] = React.useState(null);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  
+  
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+  
+  
+  
   const renderRightNav = () => {
     if(auth.user) {
-      return <button onClick={auth.handleLogout}>Logout</button>
+      return <Button className='btn1'variant="contained" onClick={auth.handleLogout}>Logout</Button>
     }
     return (
       <>
-      <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
-        <Link to='.client/src/components/shared/About.js'>About</Link>
+        
+      <Button className='btn' variant='contained' type="button" href="/login">Login</Button>
+        <Button className='btn' variant='contained' href='/register'>Register</Button>
+       
 
         
     </>)
@@ -76,8 +89,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
   
   return (
-    <React.Fragment>
+    
       <AppBar position="static" sx={{background: 'black'}} >
+        
         <Toolbar>
           <img src={image} width='120px'></img>
           <IconButton />
@@ -107,29 +121,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           </Box>
           
           <div>
-         <Button ClassName='Button'sx={{marginLeft: 'auto'}} variant="contained">{renderRightNav()}</Button>
+           
+            {renderRightNav()}
+              
       </div>
         </Toolbar>
         </AppBar>
-      </React.Fragment>
+      
     
-    
-    
-    // <div style={{display:'flex', justifyContent:'space-between'}}>
-    //     <div>
-    //     <Link to='/'>Home</Link>
-    //     <Link to='/themes'>Theme</Link>
-    //     <Link to='/profile'>Profile</Link>
-    //     <Link to='/about'>About</Link>
-        
-        
-    //   </div>
-    //   <div>
-    //     <div>{renderRightNav()}</div>
-    //     </div>
-    // </div>
   );
 };
 
 export default NavBar
-
