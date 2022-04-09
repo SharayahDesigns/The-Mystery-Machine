@@ -23,6 +23,13 @@ password:'test1234',
 image:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png',
 )
 
+u3 = User.create(
+    name:'test'
+    email:'test@test.com'
+    password:'123456'
+    image:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png'
+)
+
 r1 = u1.rooms.create(theme: 'JavaScript', image:'')
 r2 = u2.rooms.create(theme: 'IQ', image:'')
 
@@ -103,5 +110,9 @@ option3:'',
 option4:''
 )
 
-a1 = Attempt.create(answer:'', user_id:u1.id, riddle_id:r1.id)
-a2 = Attempt.create(answer:'', user_id:u2.id, riddle_id:r2.id)
+a1 = Attempt.create(answer:'', user_id:1, riddle_id:1)
+a2 = Attempt.create(answer:'', user_id:1, riddle_id:2)
+a3 = Attempt.create(answer:'', user_id:1, riddle_id:3)
+a4 = Attempt.create(answer:'', user_id:2, riddle_id:2)
+a5 = Attempt.create(answer:'', user_id:2, riddle_id:4)
+
