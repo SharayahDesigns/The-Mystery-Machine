@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 
-const RoomShow = () => {
+const RoomShow = (props) => {
   const [riddles, setRiddles] = useState ([])
   const [loading, setLoading] = useState(true)
 useEffect(()=>{
@@ -21,6 +21,14 @@ useEffect(()=>{
 //   let res = await axios.delete('/api/rooms/:id')
 //   setRiddles(riddles.filter(i=> i.id !== id))
 // }
+
+const renderData = () => {
+  const riddles = riddles.map((rid) => {
+    <p>{rid.question}</p>
+  })
+  return riddles
+}
+
 const getRiddles = async () =>{
   try {
     let res = await axios.get(`api/rooms/${params.id}`);
@@ -31,9 +39,17 @@ const getRiddles = async () =>{
     setLoading(false)
   }
 };
-// const renderRiddles =()=>{
-//   return riddles.map(i => <Riddle deleteRiddle={deleteRiddle} key={riddles.id} {...r} updateRiddle={updateRiddle}/>)
+
+// const renderRiddles = () => {
+//   const riddles = riddles.map((rid) => {  
+//     return (
+//       <p>{riddles.question}</p>
+//     )
+//   })
+//   return riddles
+//   console.log(riddles)
 // }
+
 const params = useParams()
 const location = useLocation()
 return (
@@ -43,7 +59,7 @@ return (
     {/* <p>ID: {params.id}</p> */}
     {/* <RiddleForm addRiddle={addRiddle} /> */}
     <hr />
-    {/* {renderRiddles()} */}
+    {renderData()}
     <hr />
     <p>{JSON.stringify(riddles)}</p>
   </div>
