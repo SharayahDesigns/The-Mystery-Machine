@@ -42,7 +42,7 @@ r3 = Room.create(theme:'Video Games', image:'https://images.pexels.com/photos/41
 r4 = Room.create(theme:'Mythology', image:'https://images.pexels.com/photos/5209697/pexels-photo-5209697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', user_id:6)
 r5 = Room.create(theme:'Animals', image:'https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg', user_id:5)
 
-Riddle.create(
+rid1 = Riddle.create(
     question:"What will be printed to the console?  const fruits = ['Apples', 'Oranges',    'Pears', 'Mangos'];fruits[2] = 'Bananas'; console.log(fruits);", 
     level: 1, 
     image:'', 
@@ -54,7 +54,7 @@ Riddle.create(
     room_id: 1
 )
 
-Riddle.create(
+rid2 = Riddle.create(
     question:"What will be logged to the console when we run the code below? const cities =     ['Chicago', 'San Francisco', 'New York', 'Utah']; console.log(cities[3]);", 
     level: 2, 
     image:'', 
@@ -66,7 +66,7 @@ Riddle.create(
     room_id: 1
 )
 
-Riddle.create(
+rid3 = Riddle.create(
     question:"How can you find how many elements are within an array?", 
     level: 2, 
     image:'', 
@@ -78,7 +78,7 @@ Riddle.create(
     room_id: 1
 )
 
-Riddle.create(
+rid4 = Riddle.create(
     question:"What is the general purpose of a loop?", 
     level: 3, 
     image:'', 
@@ -90,7 +90,7 @@ Riddle.create(
     room_id: 1
 )
 
-Riddle.create(
+rid5 = Riddle.create(
     question:"What is incorrect about the code block?  for (let i = 0, i < myArray.length,  i+  +) {console.log(myArray[i]);};", 
     level: 3, 
     image:'', 
@@ -102,7 +102,7 @@ Riddle.create(
     room_id: 1
 )
 
-Riddle.create(
+rid6 =Riddle.create(
     question:"What was the name of the WWF professional wrestling tag team made up of the wrestlers Ax and Smash?", 
     level: 1, 
     image:'', 
@@ -114,7 +114,7 @@ Riddle.create(
     room_id: 2
 )
 
-Riddle.create(
+rid7 = Riddle.create(
     question:"When was YouTube founded?", 
     level: 3, 
     image:'', 
@@ -126,7 +126,7 @@ Riddle.create(
     room_id: 2
 )
 
-Riddle.create(
+rid8 = Riddle.create(
     question:"When was the original Star Wars: Battlefront II released?", 
     level: 2, 
     image:'', 
@@ -138,7 +138,7 @@ Riddle.create(
     room_id: 3
 )
 
-Riddle.create(
+rid9 = Riddle.create(
     question:"Which of these is NOT a team available in the game Pok&eacute;mon Go?", 
     level: 1, 
     image:'', 
@@ -151,7 +151,7 @@ Riddle.create(
 )
 
 
-Riddle.create(
+rid10 = Riddle.create(
     question:"Talos, the mythical giant bronze man, was the protector of which island?", 
     level: 3, 
     image:'', 
@@ -163,7 +163,7 @@ Riddle.create(
     room_id: 4
 )
     
-Riddle.create(
+rid11 = Riddle.create(
     question:"Who was the Roman god of fire?", 
     level: 2, 
     image:'', 
@@ -175,7 +175,7 @@ Riddle.create(
     room_id: 4
 )
         
-Riddle.create(
+rid12 = Riddle.create(
    question:"Which of these species is not extinct?", 
    level: 1, 
    image:'', 
@@ -187,7 +187,7 @@ Riddle.create(
    room_id: 5
    )
             
-Riddle.create(
+rid13 = Riddle.create(
     question:"Unlike on most salamanders, this part of a newt is flat?", 
     level: 3, 
     image:'', 
@@ -199,13 +199,19 @@ Riddle.create(
     room_id: 5
 )
 
-Attempt.create(answer:"['Apples', 'Oranges', 'Bananas', 'Mangos']", user_id:1, riddle_id:1)
-Attempt.create(answer:'undefined', user_id:1, riddle_id:2)
-Attempt.create(answer:'length(myArray)', user_id:1, riddle_id:3)
-Attempt.create(answer:'', user_id:2, riddle_id:2)
-Attempt.create(answer:'', user_id:2, riddle_id:4)
-Attempt.create(answer:'', user_id:2, riddle_id:8)
-Attempt.create(answer:'', user_id:2, riddle_id:12)
-Attempt.create(answer:'', user_id:2, riddle_id:5)
-Attempt.create(answer:'', user_id:2, riddle_id:5)
+Attempt.create(answer:"['Apples', 'Oranges', 'Bananas', 'Mangos']", user_id:4, riddle_id:1)
+Attempt.create(answer:'undefined', user_id:4, riddle_id:2)
+Attempt.create(answer:'length(myArray)', user_id:4, riddle_id:3)
+Attempt.create(answer:'chicago', user_id:2, riddle_id:2)
+Attempt.create(answer:'Demolition', user_id:2, riddle_id:4)
+Attempt.create(answer:'November 21, 2006', user_id:2, riddle_id:8)
+Attempt.create(answer:'Komodo dragon', user_id:2, riddle_id:12)
+Attempt.create(answer:'The Bushwhackers', user_id:2, riddle_id:6)
+Attempt.create(answer:'The condition of the loop should be separated by semicolons, not commas', user_id:3, riddle_id:5)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:7)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:2)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:3)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:11)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:10)
+Attempt.create(answer:'Demolition', user_id:3, riddle_id:9)
 
