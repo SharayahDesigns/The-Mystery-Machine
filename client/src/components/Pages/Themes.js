@@ -8,8 +8,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-
-
 const Themes = (props) => {
   const [themes, setThemes] = useState([]);
   const [usersThemes, setUsersThemes] = useState([])
@@ -35,6 +33,30 @@ const Themes = (props) => {
     getThemes();
   }, []);
 
+  const card = (
+  
+    <React.Fragment>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          
+        </Typography>
+        <Typography variant="h5" component="div">
+          Test
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        Test
+        </Typography>
+        <Typography variant="body2">
+        Test
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Next Theme</Button>
+      </CardActions>
+    </React.Fragment>
+  );
+  
+
 
   const getThemes = async () => {
     try {
@@ -58,8 +80,14 @@ const Themes = (props) => {
    <h1>Themes by User</h1>
      
    <p>{JSON.stringify(themes)}</p>
+
+   <Box sx={{ minWidth: 275 }}>
+      <Card variant="outlined">{card}</Card>
+    </Box>
    
   </div>
   )
 }
+
+
 export default Themes
