@@ -62,7 +62,7 @@ const Themes = (props) => {
 
   return (  
    <div className='page'>
-   <h1>Themes by User!</h1>
+   <h1>Themes</h1>
      
    <p>{JSON.stringify(themes)}</p>
    {renderData()}

@@ -39,11 +39,8 @@ const Profile = (props) => {
       <p> {auth.user.email}</p>
       <p> {auth.user.id}</p>
      
-      
-      
-      
       <hr></hr>
-      <p> points: </p>
+      <h2> points: </h2>
       <p>{JSON.stringify(points)}</p>
       <button> Edit thing</button>
     </div>
