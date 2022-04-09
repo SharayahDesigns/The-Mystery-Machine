@@ -1,5 +1,8 @@
 import {AuthContext} from '../../providers/AuthProvider'
-import React, {useContext} from 'react'
+import React,{useContext} from 'react'
+
+
+
 
 const Profile = () => {
    let auth = useContext(AuthContext)
@@ -14,7 +17,7 @@ const Profile = () => {
     <div>
       <h1>Profile</h1>
      <img className='album' src={auth.user.image}></img>
-      <p> {auth.user.name}</p>
+      <h2> {auth.user.name}</h2>
       <p> {auth.user.email}</p>
       <p> points: </p>
       <button> Edit</button>
