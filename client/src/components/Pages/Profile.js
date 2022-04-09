@@ -38,6 +38,8 @@ const Profile = (props) => {
       <h2> {auth.user.name}</h2>
       <p> {auth.user.email}</p>
       <p> {auth.user.id}</p>
+     
+      
       
       
       <hr></hr>
