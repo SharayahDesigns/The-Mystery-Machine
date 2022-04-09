@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import Box from '@mui/material/Box';
@@ -7,6 +7,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+
 
 
 const Themes = (props) => {
@@ -61,42 +62,4 @@ const Themes = (props) => {
   </div>
   )
 }
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
-
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        
-      </Typography>
-      <Typography variant="h5" component="div">
-        
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        
-      </Typography>
-      <Typography variant="body2">
-       
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button onClick='' size="small">Next</Button>
-    </CardActions>
-  </React.Fragment>
-);
-
-export default function OutlinedCard() {
-  return (
-    <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined">{card}</Card>
-    </Box>
-  );
-}
+export default Themes

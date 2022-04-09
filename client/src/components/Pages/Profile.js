@@ -7,6 +7,8 @@ const Profile = () => {
   return <p> You should not be able to come here PLEASE redircet to LOGIN page</p>
   }
   
+ 
+  
   
   return (
     <div>
@@ -17,6 +19,7 @@ const Profile = () => {
       <p> points: </p>
       <button> Edit</button>
       
+     
       
        {/* <p> {JSON.stringify(auth)}</p> */}
       
@@ -26,4 +29,3 @@ const Profile = () => {
 }
 
 export default Profile
-

@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import {AuthContext} from '../../providers/AuthProvider'
+import image from '../Images/van.png'
 
 const Home = () => {
   let auth = useContext(AuthContext)
@@ -8,10 +9,11 @@ const Home = () => {
   }
   return (
     <div>
-      <h1>My Home </h1>
-      <p> {auth.user.name}</p>
+      <h1>WELCOME! </h1>
+      <h2> {auth.user.name}</h2>
+      <img className='logo' src={image} height={500} />
       
-     
+    
     </div>
   )
 }
