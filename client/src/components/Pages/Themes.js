@@ -41,7 +41,7 @@ const Themes = (props) => {
           
         </Typography>
         <Typography variant="h5" component="div">
-          Test
+        
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
         Test

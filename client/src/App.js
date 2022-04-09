@@ -11,6 +11,7 @@ import ProtectedRoute from './components/auth/ProtectRoute';
 import About from './components/Pages/About';
 import Profile from './components/Pages/Profile';
 import Themes from './components/Pages/Themes';
+import RoomShow from './components/Pages/RoomShow';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
               <Route path='/about' element={<About />} />
               <Route path='/profile' element={<Profile />} />
               <Route path='/themes' element={<Themes/>}/>
+              <Route path='/rooms/:id' element={<RoomShow/>}/>
+
               
               
            </Route>
