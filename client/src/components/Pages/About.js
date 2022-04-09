@@ -1,4 +1,5 @@
 import React from 'react'
+// import Image from "./images/van.png"
 
 
 const About = () => {
@@ -6,19 +7,19 @@ const About = () => {
   return (
     <div>
       <h1>About the App</h1>
-      <h1>The Goal</h1>
-      <p>Solve all the puzzles, complete all the Rooms</p>
+      <h1>The Objective!</h1>
+      <p>Work your way through all the Rooms we have set up with mind bending brain teasers to get your point count up!</p>
+      <p>Solve all the puzzles to complete all of the Rooms and then brag to your friends about your high score and challenge them to beat it!</p>
 
-      {/* <img src={'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eugenecartransport.com%2F2020%2F02%2F07%2Fmystery-machine-what-was-it%2F&psig=AOvVaw2dcODd0749ZJuoTpOaib7F&ust=1649546239533000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCPiElejMhfcCFQAAAAAdAAAAABAz'}
-      alt= 'Image' ></img> */}
+      {/* <img src=Image alt='Cant Load'></img> */}
       <h1>The Gang</h1>
+      <h4>This is our team of extraordinary developers</h4>
+      <h2>Jessica, the Brains.</h2>
       <p></p>
-      <h2>Jessica</h2>
-      <p>The Brains</p>
-      <h2>Sharayah</h2>
-      <p>The Stylist</p>
-      <h2>Austin</h2>
-      <p>Is here</p>
+      <h2>Sharayah, the Stylist.</h2>
+      <p></p>
+      <h2>Austin, is here too.</h2>
+      <p></p>
       
     </div>
   )
