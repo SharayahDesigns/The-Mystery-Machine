@@ -11,8 +11,11 @@ namespace :api do
   # Get Questions for Room
   get '/rooms/:id', to: 'rooms#show' 
 
-  # Get Profile Info with Points
-  get '/profiles', to: 'users#profiles'
+  # Get Points for Users
+  get '/points', to: 'users#points'
+
+  # Get Users
+  get '/users', to: 'users#index'
   
 end
 

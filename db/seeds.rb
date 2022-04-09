@@ -200,7 +200,7 @@ Riddle.create(
 )
 
 Attempt.create(answer:"['Apples', 'Oranges', 'Bananas', 'Mangos']", user_id:1, riddle_id:1)
-Attempt.create(answer:'How can you find how many elements are within an array?', user_id:1, riddle_id:2)
+Attempt.create(answer:'undefined', user_id:1, riddle_id:2)
 Attempt.create(answer:'length(myArray)', user_id:1, riddle_id:3)
 Attempt.create(answer:'', user_id:2, riddle_id:2)
 Attempt.create(answer:'', user_id:2, riddle_id:4)

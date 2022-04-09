@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 #   # .group("users.id")
 # end
 
-def self.profiles
+def self.points
   User.find_by_sql("SELECT u.id, u.name, u.email, u.image, SUM(r.level) AS points
   FROM users AS u
   INNER JOIN attempts AS a ON u.id = a.user_id
