@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Themes = (props) => {
   const [themes, setThemes] = useState([]);
@@ -24,27 +24,24 @@ const Themes = (props) => {
   const renderData = () => {
     const rooms = themes.map((r) => {
       return (
-        <Link to='/rooms/:id'>
-          <Card key={r.id} sx={{ maxWidth: 500 }}>
-            <CardMedia component="img" height="200" width="100%" image={r.image}/>
-            <CardContent>
-              <Typography variant="h4" component="div">
-                {r.theme}
-              </Typography>
-              <Typography vairant="h6" component="div">
-                Created By: {r.user_id}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Link>
+        <Card key={r.id} sx={{ maxWidth: 500 }}>
+          <CardMedia component="img" height="200" width="100%" image={r.image}/>
+          <CardContent>
+            <Typography variant="h4" component="div">
+              {r.theme}
+            </Typography>
+            <Typography variant="h6" component="div">
+              Created By: {r.user_id}
+            </Typography>
+            <Button variant="outlined">Enter Room</Button>
+          </CardContent>
+        </Card>
       )
     }
     
     )
     return rooms
   }
-
-
 
   const getThemes = async () => {
     try {
