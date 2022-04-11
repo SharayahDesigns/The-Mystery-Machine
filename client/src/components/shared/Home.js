@@ -12,7 +12,7 @@ const Home = () => {
       <h1>WELCOME! </h1>
       <h2> {auth.user.name}</h2>
       <img className='logo' src={image} height={500} />
-      
+     
     
     </div>
   )

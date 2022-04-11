@@ -1,10 +1,30 @@
+.btn1{
+display: flex;
+align-items:flex-end!important;
+align-self: flex-end !important;
+}
+
+
+
+
+.menu {
+width: 500px!important;
+text-decoration: none;
+padding: 20px;
+margin: 10px;
+font-weight: bold!important;
+text-shadow: #282c34;
+color: black;
+}
+.menu:hover {
+color: rgb(47, 164, 207);
+}
+
+
 .btn{
 justify-content: space-between;
 margin: 10px!important;
-}
-.btn1{
-position:fixed;
-   left:100px;
+
 }
 .nav1 {
 display: flex;
